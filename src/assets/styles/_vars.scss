@@ -1,0 +1,47 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerWidth: 1200;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$mainColorDark: #131418;
+$mainBackgroundColor: #d6dce6;
+$mainBackgroundColorDark: #282c34;
+$secondaryColor: #61dafb;
+
+// Text color
+$lightText: #ffffff;
+$darkText: #000000;
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint992;
+$burgerColor: #fefefe;
+$burgerBackgroundColor: #c5c6cc;
+$burgerBackgroundColorDark: #20232a;
+
+// Fonts
+$fontMain: sans-serif;
+$fontSecondary: "";
+
+// UI Buttons
+$buttonRadius: 5 + px;
+$buttonPaddingTop: 15 + px;
+$buttonPaddingBottom: 30 + px;
+$buttonBorder: 1 + px;
+
+// UI Buttons Colors
+$baseButtonColor: transparent;
+$baseButtonBorderColor: #000000;
+$primaryButtonColor: #0062cc;
+$successButtonColor: #28a745;
+$dangerButtonColor: #bd2130;
+$warningButtonColor: #d39e00;
+$lightButtonColor: #d3d9df;
+$darkButtonColor: #171a1d;
+$buttonLightText: #ffffff;
+$buttonDarkText: #212529;

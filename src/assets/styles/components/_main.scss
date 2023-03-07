@@ -1,0 +1,83 @@
+.layout {
+    background-color: $mainBackgroundColor;
+    color: $darkText;
+    min-height: 100vh;
+    transition: 0.3s background-color, color;
+    &.dark {
+        background-color: $mainBackgroundColorDark;
+        color: $lightText;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+    gap: 50px;
+    // .main__image
+    &__image {
+        animation: LogoRotate 5s linear infinite;
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    // .main__text
+
+    &__text {
+    }
+
+    // .main__technologies
+
+    &__technologies {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    // .main__technologies-item
+
+    &__technologies-item {
+        img {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .main__text-title
+
+    &__text-title {
+        margin-top: 30px;
+        color: $secondaryColor;
+        font-size: 80px;
+        line-height: 1.3;
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 40px;
+            line-height: 1.1;
+        }
+    }
+
+    // .main__text-subtitle
+
+    &__text-subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 1.1;
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 15px;
+            line-height: 1.1;
+        }
+    }
+}
+
+@keyframes LogoRotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}

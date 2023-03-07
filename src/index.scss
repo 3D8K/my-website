@@ -1,0 +1,19 @@
+// Global styles
+@import "assets/styles/reset";
+@import "assets/styles/vars";
+@import "assets/styles/global";
+
+// Components styles
+@import "assets/styles/components/header";
+@import "assets/styles/components/main";
+@import "assets/styles/components/themeSwitch";
+@import "assets/styles/home";
+
+// Ui elements styles
+@import "assets/styles/ui/accordion";
+@import "assets/styles/ui/button";
+@import "assets/styles/ui/inputs";
+@import "assets/styles/ui/loader";
+@import "assets/styles/ui/modal";
+@import "assets/styles/ui/formInput";
+@import "assets/styles/ui/select";

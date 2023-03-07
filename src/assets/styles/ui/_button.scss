@@ -1,0 +1,92 @@
+.button {
+    display: flex;
+    padding: $buttonPaddingTop $buttonPaddingBottom;
+    border-radius: $buttonRadius;
+    border: $buttonBorder solid $baseButtonBorderColor;
+    background-color: $baseButtonColor;
+    color: $buttonLightText;
+    transition: 0.3s all;
+    &:hover {
+        cursor: pointer;
+    }
+    &.primary {
+        background: $primaryButtonColor;
+        border: 1px solid $primaryButtonColor;
+        &:hover {
+            border: 1px solid darken($primaryButtonColor, 10);
+            background: darken($primaryButtonColor, 10);
+        }
+        &:active {
+            background: lighten($primaryButtonColor, 10);
+            border: 1px solid lighten($primaryButtonColor, 10);
+        }
+    }
+
+    &.success {
+        background: $successButtonColor;
+        border: 1px solid $successButtonColor;
+        &:hover {
+            border: 1px solid darken($successButtonColor, 10);
+            background: darken($successButtonColor, 10);
+        }
+        &:active {
+            background: lighten($successButtonColor, 10);
+            border: 1px solid lighten($successButtonColor, 10);
+        }
+    }
+
+    &.danger {
+        background: $dangerButtonColor;
+        border: 1px solid $dangerButtonColor;
+        &:hover {
+            border: 1px solid darken($dangerButtonColor, 10);
+            background: darken($dangerButtonColor, 10);
+        }
+        &:active {
+            background: lighten($dangerButtonColor, 10);
+            border: 1px solid lighten($dangerButtonColor, 10);
+        }
+    }
+
+    &.warning {
+        color: $buttonDarkText;
+        background: $warningButtonColor;
+        border: 1px solid $warningButtonColor;
+        &:hover {
+            border: 1px solid darken($warningButtonColor, 10);
+            background: darken($warningButtonColor, 10);
+        }
+        &:active {
+            background: lighten($warningButtonColor, 10);
+            border: 1px solid lighten($warningButtonColor, 10);
+        }
+    }
+
+    &.light {
+        color: $buttonDarkText;
+        background: $lightButtonColor;
+        border: 1px solid $lightButtonColor;
+        &:hover {
+            border: 1px solid darken($lightButtonColor, 10);
+            background: darken($lightButtonColor, 10);
+        }
+        &:active {
+            background: lighten($lightButtonColor, 10);
+            border: 1px solid lighten($lightButtonColor, 10);
+        }
+    }
+
+    &.dark {
+        color: $buttonLightText;
+        background: $darkButtonColor;
+        border: 1px solid $darkButtonColor;
+        &:hover {
+            border: 1px solid darken($darkButtonColor, 10);
+            background: darken($darkButtonColor, 10);
+        }
+        &:active {
+            background: lighten($darkButtonColor, 10);
+            border: 1px solid lighten($darkButtonColor, 10);
+        }
+    }
+}
