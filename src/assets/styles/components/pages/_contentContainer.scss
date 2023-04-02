@@ -1,0 +1,16 @@
+.content-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $lightBorder;
+    display: flex;
+    padding: 20px;
+    min-width: 100%;
+    min-height: 85vh;
+    &.dark {
+        border: 1px solid $darkBorder;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        padding: 10px;
+    }
+}

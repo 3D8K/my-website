@@ -2,12 +2,20 @@
 @import "assets/styles/reset";
 @import "assets/styles/vars";
 @import "assets/styles/global";
+@import "assets/styles/fonts";
 
 // Components styles
 @import "assets/styles/components/header";
 @import "assets/styles/components/main";
 @import "assets/styles/components/themeSwitch";
+@import "assets/styles/components/pages/contentContainer";
+@import "assets/styles/components/sideThemeSwitch";
 @import "assets/styles/home";
+
+// Pages
+@import "assets/styles/components/pages/contact";
+@import "assets/styles/components/pages/main";
+@import "assets/styles/components/pages/projects";
 
 // Ui elements styles
 @import "assets/styles/ui/accordion";

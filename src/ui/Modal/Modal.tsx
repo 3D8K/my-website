@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useTheme } from '../../hooks/useTheme'
+import { useTheme } from '@hooks/index'
 import { Button } from '../Buttons/Button'
 import CancelIcon from '../../assets/img/cancel-icon.svg'
 
@@ -15,8 +15,8 @@ export function Modal() {
 
   return (
     <>
-      <div className={`modal__wrapper ${!!modalOpen && 'open'} `}>
-        <div className={`modal ${!!isDark && 'dark'}`}>
+      <div className={`modal__wrapper ${modalOpen ? 'open' : ''} `}>
+        <div className={`modal ${isDark ? 'dark' : ''}`}>
           <div className='modal__close'>
             <img src={CancelIcon} onClick={openModal} alt='cancel' width='10px' height='10px' />
           </div>

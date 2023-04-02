@@ -1,0 +1,65 @@
+.side-theme-switch {
+    position: absolute;
+    bottom: 20%;
+    left: -110px;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    font-family: "Monument Extended";
+    rotate: -90deg;
+    gap: 30px;
+    // .side-theme-switch__light-wrapper
+    @media screen and (max-width: $breakpoint768) {
+        display: none;
+    }
+
+    &__current {
+        display: none;
+        background: $secondaryColor;
+        width: 8px;
+        height: 8px;
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__light-wrapper,
+    &__dark-wrapper {
+        transition: 0.3s all;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &.dark {
+            .side-theme-switch__marker {
+                border: 1px solid $lightText;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $secondaryColor;
+            .side-theme-switch__marker {
+                border: 1px solid $secondaryColor;
+            }
+        }
+    }
+
+    &__marker {
+        height: 14px;
+        width: 14px;
+        padding: 2px;
+        border: 1px solid $darkText;
+        background: inherit;
+        transition: 0.3s all;
+    }
+
+    // .side-theme-switch__label
+
+    &__label {
+        text-transform: uppercase;
+    }
+}

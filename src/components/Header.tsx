@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
-import ReactLogo from '../assets/img/react-logo.svg'
-import { ThemeSwitch } from './ThemeSwitch'
-import { useTheme } from '../hooks/useTheme'
+import Logo from '../assets/img/logo.svg'
+import LogoDark from '../assets/img/logo-dark.svg'
+import TriangleIcon from '../assets/img/triangle.svg'
+import TriangleIconDark from '../assets/img/triangle_dark.svg'
+import { useTheme } from '@hooks/index'
+import { Link } from 'react-router-dom'
 
-export function Header() {
+export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [submenuOpen, setSubmenuOpen] = useState(false)
   const { isDark } = useTheme()
 
   const burgerOpenFunction = () => {
+    menuOpen ? document.body.classList.remove('locked') : document.body.classList.add('locked')
     setMenuOpen(!menuOpen)
   }
 
@@ -19,56 +24,75 @@ export function Header() {
 
   return (
     <header>
-      <div className={`header ${!!isDark && 'dark'}`}>
+      <div className={`header ${isDark ? 'dark' : ''}`}>
         <div className='container'>
           <div className='navbar'>
+            <a href='/' className={`navbar__sign ${isDark ? 'dark' : ''}`}>
+              Stepan Osadchii
+            </a>
             <div className='logo'>
-              <a href='#'>
-                <img src={ReactLogo} alt='logo' />
-                <span>React assembly</span>
-              </a>
+              <img src={isDark ? Logo : LogoDark} alt='logo' />
             </div>
             <nav>
               <ul className={`menu ${!!menuOpen && 'active'}`}>
                 <li className='menu__item'>
-                  <a
-                    href='https://github.com/3D8K'
-                    target='_blank'
-                    className='menu__item-link'
-                    rel='noreferrer'
-                  >
-                    GitHub
-                  </a>
+                  <Link to='/' className='menu__item-link' onClick={burgerOpenFunction}>
+                    main
+                  </Link>
                 </li>
                 <li className='menu__item'>
-                  <a
-                    href='https://www.linkedin.com/in/stepan-osadchii-aa1541218/'
-                    target='_blank'
-                    className='menu__item-link'
-                    rel='noreferrer'
-                  >
-                    LinkedIn
-                  </a>
+                  <Link to='/projects' className='menu__item-link' onClick={burgerOpenFunction}>
+                    projects
+                  </Link>
                 </li>
                 <li className='menu__item'>
-                  <a
-                    href='https://t.me/S3D8K'
-                    target='_blank'
-                    className='menu__item-link'
-                    rel='noreferrer'
-                  >
-                    Telegram
-                  </a>
+                  <Link to='/about' className='menu__item-link' onClick={burgerOpenFunction}>
+                    about
+                  </Link>
                 </li>
-                <li className='menu__item theme__switcher'>
-                  <ThemeSwitch />
+                <li className='menu__item'>
+                  <Link to='/contact' className='menu__item-link' onClick={burgerOpenFunction}>
+                    contact
+                  </Link>
                 </li>
               </ul>
             </nav>
-            <div className='menu__theme_switcher'>
-              <ThemeSwitch />
+            <div className='menu__navigation'>
+              <div onClick={() => setSubmenuOpen(!submenuOpen)}>
+                <p>navigation</p>
+                <img
+                  src={isDark ? TriangleIconDark : TriangleIcon}
+                  alt='triangle'
+                  className={`${submenuOpen ? 'active' : ''}`}
+                />
+              </div>
+              <ul className={`submenu__list ${submenuOpen ? 'active' : ''}`}>
+                <li className='submenu__item'>
+                  <Link to='/' className='submenu__link'>
+                    main
+                  </Link>
+                </li>
+                <li className='submenu__item'>
+                  <Link to='/projects' className='submenu__link'>
+                    projects
+                  </Link>
+                </li>
+                <li className='submenu__item'>
+                  <Link to='/about' className='submenu__link'>
+                    about
+                  </Link>
+                </li>
+                <li className='submenu__item'>
+                  <Link to='/contact' className='submenu__link'>
+                    contact
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <button className={`burger ${!!menuOpen && 'active'}`} onClick={burgerOpenFunction}>
+            <button
+              className={`burger ${!!menuOpen && 'active'} ${isDark ? 'dark' : ''}`}
+              onClick={burgerOpenFunction}
+            >
               <span></span>
             </button>
           </div>

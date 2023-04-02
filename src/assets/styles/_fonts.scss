@@ -1,4 +1,33 @@
 @font-face {
-    font-family: '';
-    src: url('') format('');
+    font-family: "Neue Montreal";
+    src: url("/src/assets/fonts/NeueMontreal-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Montreal";
+    src: url("/src/assets/fonts/NeueMontreal-Bold.otf");
+    font-weight: 800;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Neue Montreal";
+    src: url("/src/assets/fonts/NeueMontreal-Medium.otf");
+    font-weight: 500;
+    font-style: medium;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("/src/assets/fonts/MonumentExtended-Regular.otf");
+    font-style: medium;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("/src/assets/fonts/MonumentExtended-Ultrabold.otf");
+    font-weight: 700;
+    font-style: medium;
 }

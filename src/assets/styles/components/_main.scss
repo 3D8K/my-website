@@ -2,10 +2,26 @@
     background-color: $mainBackgroundColor;
     color: $darkText;
     min-height: 100vh;
-    transition: 0.3s background-color, color;
+    a {
+        color: $darkText;
+        transition: 1s color;
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+    transition: 1s background-color, color;
     &.dark {
         background-color: $mainBackgroundColorDark;
         color: $lightText;
+        a {
+            color: $lightText;
+            &:hover {
+                color: $secondaryColor;
+            }
+        }
+        body {
+            background: $mainBackgroundColorDark;
+        }
     }
 }
 

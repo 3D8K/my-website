@@ -1,5 +1,5 @@
 {
-  "name": "webpack-assembly",
+  "name": "my-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,8 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "framer-motion": "^10.2.4",
+    "js-file-download": "^0.4.12",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.5",
+    "react-router-dom": "^6.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -28,6 +33,7 @@
     "@typescript-eslint/parser": "^5.53.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "eslint": "^8.35.0",
     "eslint-config-google": "^0.14.0",

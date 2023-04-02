@@ -1,0 +1,197 @@
+.main {
+    // .main__element
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    &__element {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: $breakpoint992) {
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        transform: rotate(100%);
+        flex-direction: row;
+        animation: rotateCircle 8s linear infinite;
+
+        &_text {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            p {
+                font-family: "Monument Extended";
+                text-transform: uppercase;
+                span {
+                    position: absolute;
+                    font-size: 1.2em;
+                    left: 50%;
+                    transform-origin: 0 150px;
+                }
+            }
+        }
+    }
+    @keyframes rotateCircle {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    // .main__title
+
+    &__title {
+        width: 100%;
+        text-align: left;
+        font-family: "Monument Extended";
+        font-size: 70px;
+        color: $secondaryColor;
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 50px;
+        }
+    }
+
+    // .main__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+        line-height: 1.3;
+        width: 100%;
+        text-align: left;
+        font-size: 30px;
+        font-weight: 600;
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 20px;
+        }
+    }
+
+    // .main__description-wrapper
+
+    &__description-wrapper {
+        margin-top: 25px;
+        gap: 50px;
+        display: flex;
+        text-align: left;
+    }
+
+    // .main__description-text
+
+    &__description-text {
+        opacity: 0.5;
+        font-size: 20px;
+        @media screen and (max-width: $breakpoint768) {
+        }
+    }
+
+    &__button-wrapper {
+        margin-top: 50px;
+        @media screen and (max-width: $breakpoint992) {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint992) {
+        flex-direction: column-reverse;
+    }
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a.learn-more {
+    width: 15rem;
+    height: auto;
+}
+
+a.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: $secondaryColor;
+}
+
+a.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+a.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+a.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+a.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    font-family: "Monument Extended";
+    margin: 0 0 0 1.85rem;
+    color: $secondaryColor;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a:hover .circle {
+    width: 100%;
+}
+
+a:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+a:hover .button-text {
+    color: #fff;
+}
