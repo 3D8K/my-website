@@ -8,12 +8,7 @@ export const ProjectsPage = () => {
     <div className='projects'>
       <ul className='projects__list'>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2023</span>
               <span className='project__slash'>/</span>
@@ -25,12 +20,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2023</span>
               <span className='project__slash'>/</span>
@@ -42,12 +32,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2023</span>
               <span className='project__slash'>/</span>
@@ -59,12 +44,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2022</span>
               <span className='project__slash'>/</span>
@@ -76,12 +56,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2022</span>
               <span className='project__slash'>/</span>
@@ -93,12 +68,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2022</span>
               <span className='project__slash'>/</span>
@@ -110,12 +80,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2022</span>
               <span className='project__slash'>/</span>
@@ -127,12 +92,7 @@ export const ProjectsPage = () => {
           </a>
         </li>
         <li className='projects__item'>
-          <a
-            href='https://veritty.io'
-            target='_blank'
-            rel='noreferrer'
-            className='projects__item-link'
-          >
+          <a target='_blank' rel='noreferrer' className='projects__item-link'>
             <div className='project__inside-wrapper'>
               <span className='project__date'>2021</span>
               <span className='project__slash'>/</span>

@@ -3,7 +3,7 @@ import { ThemeProvider } from '@providers/index'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Layout, ContentContainer } from '@wrappers/index'
 import { Header, SideThemeSwitch } from '@components/index'
-import { MainPage, ContactPage, ProjectsPage } from '@pages/index'
+import { MainPage, ContactPage, ProjectsPage, AboutPage } from '@pages/index'
 
 export const App = () => {
   const location = useLocation()
@@ -18,7 +18,7 @@ export const App = () => {
               <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<MainPage />} />
                 <Route path='/projects' element={<ProjectsPage />} />
-                <Route path='/about' element={<div>about</div>} />
+                <Route path='/about' element={<AboutPage />} />
                 <Route path='/contact' element={<ContactPage />} />
               </Routes>
             </>

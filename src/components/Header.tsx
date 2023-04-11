@@ -68,28 +68,45 @@ export const Header = () => {
               </div>
               <ul className={`submenu__list ${submenuOpen ? 'active' : ''}`}>
                 <li className='submenu__item'>
-                  <Link to='/' className='submenu__link'>
+                  <Link
+                    to='/'
+                    className='submenu__link'
+                    onClick={() => setTimeout(() => setSubmenuOpen(false), 400)}
+                  >
                     main
                   </Link>
                 </li>
                 <li className='submenu__item'>
-                  <Link to='/projects' className='submenu__link'>
+                  <Link
+                    to='/projects'
+                    className='submenu__link'
+                    onClick={() => setTimeout(() => setSubmenuOpen(false), 400)}
+                  >
                     projects
                   </Link>
                 </li>
                 <li className='submenu__item'>
-                  <Link to='/about' className='submenu__link'>
+                  <Link
+                    to='/about'
+                    className='submenu__link'
+                    onClick={() => setTimeout(() => setSubmenuOpen(false), 400)}
+                  >
                     about
                   </Link>
                 </li>
                 <li className='submenu__item'>
-                  <Link to='/contact' className='submenu__link'>
+                  <Link
+                    to='/contact'
+                    className='submenu__link'
+                    onClick={() => setTimeout(() => setSubmenuOpen(false), 400)}
+                  >
                     contact
                   </Link>
                 </li>
               </ul>
             </div>
             <button
+              aria-label='menu'
               className={`burger ${!!menuOpen && 'active'} ${isDark ? 'dark' : ''}`}
               onClick={burgerOpenFunction}
             >

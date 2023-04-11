@@ -1,0 +1,136 @@
+.about {
+    // .about__title
+
+    &__image-wrapper {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            .about__image_square {
+                top: 15px;
+                left: 15px;
+            }
+
+            .my_photo {
+                filter: invert(38%) sepia(63%) saturate(5019%) hue-rotate(3deg) brightness(104%) contrast(102%);
+            }
+        }
+    }
+
+    &__image_square {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: $secondaryColor;
+        z-index: 1;
+        transition: 0.3s all;
+        top: 30px;
+        left: 30px;
+        @media screen and (max-width: $breakpoint480) {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    &__title {
+        font-family: "Monument Extended";
+        font-size: 50px;
+        color: $secondaryColor;
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 30px;
+        }
+    }
+
+    // .about__inside-wrapper
+
+    &__inside-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        @media screen and (max-width: $breakpoint992) {
+            flex-direction: column-reverse;
+            gap: 330px;
+        }
+
+        @media screen and (max-width: $breakpoint480) {
+            gap: 270px;
+        }
+    }
+
+    // .about__section
+
+    &__section {
+        margin-top: 40px;
+        display: flex;
+        text-align: start;
+        max-width: 60%;
+        font-size: 20px;
+        line-height: 1.3;
+        font-family: "Neue Montreal";
+        @media screen and (max-width: $breakpoint992) {
+            max-width: 100%;
+        }
+        @media screen and (max-width: $breakpoint768) {
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        &.second {
+            display: flex;
+            img {
+                transition: 0.3s all;
+                position: absolute;
+                max-width: 300px;
+                height: 300px;
+                z-index: 2;
+                @media screen and (max-width: $breakpoint480) {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    // .about__text
+
+    &__text {
+    }
+
+    &__skills {
+        padding-left: 15px;
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        gap: 100px;
+        align-items: center;
+        flex-direction: row;
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: square;
+            gap: 20px;
+            li {
+                position: relative;
+                font-family: "Neue Montreal";
+                text-transform: uppercase;
+                font-weight: 700;
+                &::before {
+                    content: "▹";
+                    color: $secondaryColor;
+                    position: absolute;
+                    left: -15px;
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+            }
+        }
+        @media screen and (max-width: $breakpoint480) {
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+}
+.first {
+}
+.second {
+}
